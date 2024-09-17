@@ -17,20 +17,20 @@ export const sidebarLinks = [
     },
     {
       imgURL: '/icons/video.svg',
-      route: '/recordings',
+      route: '/recording',
       label: 'Recordings',
     },
     {
       imgURL: '/icons/personal.svg',
-      route: '/personal-room',
+      route: '/personal',
       label: 'Personal Room',
     },
   ];
   
   export const avatarImages = [
-    '/images/avatar-1.jpeg',
-    '/images/avatar-2.jpeg',
-    '/images/avatar-3.png',
-    '/images/avatar-4.png',
-    '/images/avatar-5.png',
+    '/public/images/img.jpg',
+    '/public/images/img1.jpg',
+    '/public/images/img2.jpg',
+    '/public/images/img3.jpg',
+    '/public/images/img4.jpg',
   ];

@@ -4,7 +4,7 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: ;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -44,7 +44,9 @@ body {
 .str-video__participant-details {
   color: white;
 }
-
+.bg-hero{
+  background-image: url("/public/hero.png");
+}
 .str-video__menu-container {
   color: white;
 }
@@ -163,7 +165,7 @@ body {
     --radius: 0.5rem;
   }
   .dark {
-    --background: 222.2 84% 4.9%;
+    --background: 0 0% 0%;
     --foreground: 210 40% 98%;
     --card: 222.2 84% 4.9%;
     --card-foreground: 210 40% 98%;
