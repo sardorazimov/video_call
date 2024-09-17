@@ -1,11 +1,13 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 
 import Image from "next/image";
 
 import { cn } from "@/lib/utils";
 import { Button } from "../ui/button";
-import { avatarImages } from "@/constants/route";
+
 import { useToast } from "../ui/use-toaster";
+import { Copy } from "lucide-react";
 
 interface MeetingCardProps {
   title: string;
@@ -31,7 +33,7 @@ const MeetingCard = ({
   const { toast } = useToast();
 
   return (
-    <section className="flex min-h-[258px] w-full flex-col justify-between rounded-[14px] bg-dark-1 px-5 py-8 xl:max-w-[568px]">
+    <section className="flex min-h-[258px] w-full flex-col justify-between rounded-[14px] bg-white/15 px-5 py-8 xl:max-w-[568px]">
       <article className="flex flex-col gap-5">
         <Image src={icon} alt="upcoming" width={28} height={28} />
         <div className="flex justify-between">
@@ -43,24 +45,33 @@ const MeetingCard = ({
       </article>
       <article className={cn("flex justify-center relative", {})}>
         <div className="relative flex w-full max-sm:hidden">
-          {avatarImages.map((img, index) => (
-            <Image
-              key={index}
-              src={img}
-              alt="attendees"
-              width={40}
-              height={40}
-              className={cn("rounded-full", { absolute: index > 0 })}
-              style={{ top: 0, left: index * 28 }}
-            />
-          ))}
-          <div className="flex-center absolute left-[136px] size-10 rounded-full border-[5px] border-dark-3 bg-dark-4">
+          <img src="/images/img.jpg" alt="" 
+           style={{ top: 0, left: 28 }}
+           className="w-10 h-10 rounded-full"
+          />
+          <img src="/images/img1.jpg" alt="" 
+           style={{ top: 0, left: 28 }}
+           className="w-10 h-10 rounded-full"
+          />
+          <img src="/images/img2.jpg" alt="" 
+           style={{ top: 0, left: 28 }}
+           className="w-10 h-10 rounded-full"
+          />
+          <img src="/images/img3.jpg" alt="" 
+           style={{ top: 0, left: 28 }}
+           className="w-10 h-10 rounded-full"
+          />
+          <img src="/images/img4.jpg" alt="" 
+           style={{ top: 0, left: 28 }}
+           className="w-10 h-10 rounded-full"
+          />
+          <div className="flex-center absolute left-[136px] size-10 rounded-full border-[5px] border-white/10">
             +5
           </div>
         </div>
         {!isPreviousMeeting && (
           <div className="flex gap-2">
-            <Button onClick={handleClick} className="rounded bg-blue-1 px-6">
+            <Button onClick={handleClick} className="rounded bg-white/10  px-6">
               {buttonIcon1 && (
                 <Image src={buttonIcon1} alt="feature" width={20} height={20} />
               )}
@@ -73,14 +84,9 @@ const MeetingCard = ({
                   title: "Link Copied",
                 });
               }}
-              className="bg-dark-4 px-6"
+              className="bg-white/10 px-6"
             >
-              <Image
-                src="/icons/copy.svg"
-                alt="feature"
-                width={20}
-                height={20}
-              />
+              <Copy  className="text-white" size={25}/>
               &nbsp; Copy Link
             </Button>
           </div>

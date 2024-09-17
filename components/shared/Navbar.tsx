@@ -23,8 +23,7 @@ const Navbar = () => {
         <SignedIn>
           <UserButton afterSignOutUrl="/sign-in" />
         </SignedIn>
-
-       <MobileNav /> 
+       <div className='sm:flex lg:hidden'><MobileNav /> </div>
       </div>
     </nav>
   );
