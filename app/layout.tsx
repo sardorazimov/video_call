@@ -32,15 +32,7 @@ export default function RootLayout({
        appearance={{
         layout: {
           socialButtonsVariant: "iconButton",
-          logoImageUrl: "/logo.svg",
-        },
-        variables: {
-          colorText: "#fff",
-          colorPrimary: "#0E78F9",
-          colorBackground: "rgb(255 255 255 / 0.15)",
-          colorInputBackground: "#252A41",
-          colorInputText: "#fff",
-        },
+          logoImageUrl: "/logo-dark.svg", },
       }}
    >
    <body
@@ -53,6 +45,7 @@ export default function RootLayout({
             disableTransitionOnChange
           >
             {children}
+            
           </ThemeProvider>
       </body>
    </ClerkProvider>
